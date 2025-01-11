@@ -33,7 +33,7 @@
     }
 
     .height-width {
-        width: max-content;
+        width: 90%;
         margin: 0 auto;
         border: 1px solid #ccc;
         border-radius: 1rem;
@@ -67,13 +67,37 @@
         width: 90%;
         margin: 0 auto;
     }
+
+    .scroll {
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        scrollbar-width: 2px;
+        scrollbar-color: #ccc;
+        padding-bottom: 5rem;
+    }
+
+    @media screen and (max-width: 768px) {
+        .table2 th, .getUserTable th {
+            writing-mode: vertical-lr;
+            transform: rotate(180deg);
+            padding: 0.5rem;
+        }
+        .getUserTable {
+            width: 90%;
+        }
+
+        .inputBOxes {
+            flex-wrap: wrap;
+        }
+    }
 </style>
 
 <body>
 
     <h1 class="text-center pad--20">Grill and Glass Calculation</h1>
     <div class="height-width f-col f-center gap-10 grillInputBox" id="grillInputBox">
-        <div class="f gap-10">
+        <div class="f gap-10 inputBOxes">
             <input type="number" id="grillWidthInput" placeholder="Width" step="0.01">
             <input type="number" id="grillHeightInput" placeholder="Height" step="0.01">
         </div>
