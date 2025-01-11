@@ -150,6 +150,9 @@ document.addEventListener("DOMContentLoaded", () => {
       if (tbody.textContent.trim() === "") {
         table1.classList.add("hide");
         table2.classList.add("hide");
+        setTimeout(() => {
+          showToast("There is no data to Calculate", "error");
+        }, 1000);
       } else {
         table1.classList.remove("hide");
         table2.classList.remove("hide");

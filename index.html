@@ -70,19 +70,22 @@
 
     .scroll {
         width: 100%;
-        overflow-x: scroll;
+        overflow-x: auto;
         overflow-y: hidden;
-        scrollbar-width: 2px;
-        scrollbar-color: #ccc;
+        scrollbar-width: thin;
+        scrollbar-color: #aaa #f5f5f5;
         padding-bottom: 5rem;
     }
 
     @media screen and (max-width: 768px) {
-        .table2 th, .getUserTable th {
+
+        .table2 th,
+        .getUserTable th {
             writing-mode: vertical-lr;
             transform: rotate(180deg);
             padding: 0.5rem;
         }
+
         .getUserTable {
             width: 90%;
         }
