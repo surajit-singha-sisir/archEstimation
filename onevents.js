@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
           //   EMPTY INPUT BOX
           document.getElementById("grillWidthInput").value = "";
           document.getElementById("grillHeightInput").value = "";
-          showToast("New Data Added");
+          showToast("New Data Added", "info");
 
           table2(width, height, rowCounter);
 
