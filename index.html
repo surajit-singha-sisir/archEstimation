@@ -35,7 +35,7 @@
     .height-width {
         width: 90%;
         margin: 0 auto;
-        border: 1px solid #ccc;
+        border: 2px solid #ccc;
         border-radius: 1rem;
         padding: 1rem;
         margin-bottom: 2rem;
@@ -94,6 +94,38 @@
             flex-wrap: wrap;
         }
     }
+
+    .bounceBorder {
+        transition: all 0.3s ease;
+        animation: bounceBorder 1s ease-in-out;
+    }
+
+
+
+    @keyframes bounceBorder {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+
+        40% {
+            transform: translateY(-4px);
+            box-shadow: 0 0 1px 2px #ff0800;
+        }
+
+        50% {
+            box-shadow: 0 0 2px 2px #ccc;
+        }
+
+        60% {
+            transform: translateY(-2px);
+            box-shadow: 0 0 1px 2px #ff0800;
+        }
+    }
 </style>
 
 <body>
@@ -101,7 +133,7 @@
     <h1 class="text-center pad--20">Grill and Glass Calculation</h1>
     <div class="height-width f-col f-center gap-10 grillInputBox" id="grillInputBox">
         <div class="f gap-10 inputBOxes">
-            <input type="number" id="grillWidthInput" placeholder="Width" step="0.01">
+            <input type="number" class="bounceLater" id="grillWidthInput" placeholder="Width" step="0.01">
             <input type="number" id="grillHeightInput" placeholder="Height" step="0.01">
         </div>
         <input type="submit" class="btn btn-primary" id="addGrillItem" value="Add">
