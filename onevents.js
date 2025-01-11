@@ -15,10 +15,6 @@ document.addEventListener("DOMContentLoaded", () => {
           let table1 = document.querySelector(".getUserTable");
           let tbody = table1.querySelector("tbody");
 
-          if (tbody && tbody.children.length < 1) {
-            table1.classList.toggle("hide");
-          }
-
           let widthDecimal, width, heightDecimal, height;
           const wDecimals = getWidth.toString().split(".");
           const hDecimals = getHeight.toString().split(".");
@@ -59,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
           table2(width, height, rowCounter);
 
           deletedAction(tbody);
+          checkTbody(tbody);
           rowCounter++;
         }
       }
@@ -138,6 +135,26 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
     return {};
+  }
+
+  function checkTbody(tbody) {
+    const table1 = tbody.closest("table");
+    const table2 = document.querySelector(".table2");
+
+    if (table1.classList.contains("hide")) {
+      table1.classList.remove("hide");
+      table2.classList.remove("hide");
+    }
+
+    tbody.addEventListener("click", () => {
+      if (tbody.textContent.trim() === "") {
+        table1.classList.add("hide");
+        table2.classList.add("hide");
+      } else {
+        table1.classList.remove("hide");
+        table2.classList.remove("hide");
+      }
+    });
   }
 
   inputTable();

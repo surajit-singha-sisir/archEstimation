@@ -4,13 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table Example</title>
+    <title>Grill and Glass Calculation</title>
     <link rel="stylesheet" href="https://surajit-singha-sisir.github.io/mastorsCDN/mastors.css">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/surajit-singha-sisir/mastorsCDN@v1.1/mastorsIcons/mastorsIcons.css">
     <script type="module" src="onevents.js"></script>
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    body {
+        font-family: "Poppins", serif;
+    }
+
     .contenteditable {
         outline: none;
         position: relative;
@@ -56,6 +62,11 @@
     .getUserTable thead tr:last-child {
         background-color: #f1eeee;
     }
+
+    .width-90 {
+        width: 90%;
+        margin: 0 auto;
+    }
 </style>
 
 <body>
@@ -88,38 +99,25 @@
         </tbody>
     </table>
 
-    <table class="table table2">
-        <thead>
-            <tr>
-                <th>Code</th>
-                <th>Width (ft)</th>
-                <th>Height (ft)</th>
-                <th>Area (SFT)</th>
-                <th>Perimeter</th>
-                <th>Frame Length (ft-in)</th>
-                <th>Quantity</th>
-                <th>Total Frame Length</th>
-                <th>Total Glass & Grill A.</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- <tr class="trs inputTrs-">
-                <td class="uppercase code"></td>
-                <td class="width"></td>
-                <td class="height"></td>
-                <td class="area">42.00</td>
-                <td class="perimeter">26.00</td>
-                <td class="frame-length">10.7</td>
-                <td class="quantity contenteditable" contenteditable="true" oninput="validDecimal(this)">
-                </td>
-                <td class="total-frame-length">42</td>
-                <td>
-                    <span class="total-glass">168</span>
-                    <span>SFT</span>
-                </td>
-            </tr> -->
-        </tbody>
-    </table>
+    <div class="scroll">
+        <table class="table table2 hide width-90">
+            <thead>
+                <tr>
+                    <th>Code</th>
+                    <th>Width (ft)</th>
+                    <th>Height (ft)</th>
+                    <th>Area (SFT)</th>
+                    <th>Perimeter</th>
+                    <th>Frame Length (ft-in)</th>
+                    <th>Quantity</th>
+                    <th>Total Frame Length</th>
+                    <th>Total Glass & Grill A.</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
     <script>
         function validDecimal(element) {
             // Allow only digits and one decimal point
